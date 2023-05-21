@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" id="html-login">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثبت نام || ورود</title>
+  <link rel="stylesheet" href="./css/login.css" type="text/css">
+</head>
+<body id="body-login">
+<div class="wrapper-login">
+      <div class="title-text">
+        <div class="title login">ورود به حساب</div>
+        <div class="title signup">ثبت نام</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">ورود</label>
+          <label for="signup" class="slide signup">ثبت نام</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="#" class="login">
+            <pre>
+            </pre>
+            <div class="field">
+              <input type="text" placeholder="ایمیل" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="رمز عبور" required>
+            </div>
+            <div class="pass-link"><a href="#">فراموشی رمز</a></div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="ورود">
+            </div>
+            <div class="signup-link"><a href="">ایجاد حساب</a></div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="نام و نام خانوادگی" required>
+            </div>
+            <div class="field">
+              <input type="text" placeholder="ایمیل" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="رمز عبور" required>
+            </div>
+            <div class="field">
+              <input type="password" placeholder="تایید رمز عبور" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="ایجاد حساب">
+            </div>
+            <div class="signup-link"><a href="">ورود به حساب</a></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <script  src="./js/login.js"></script>
+
+</body>
+</html>

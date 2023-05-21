@@ -1,0 +1,68 @@
+@media (min-width: 768px) and (max-width: 992px) {
+    div.banner-area{
+        width: 100%;
+        height: auto;
+        padding: 40px;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    /* picture */
+    div.banner-area>div.picture{
+        width: 90%;
+    }
+    div.banner-area>div.picture>img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* end of picture */
+    /* data */
+    div.banner-area>div.data{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    div.banner-area>div.data>span.banner-title{
+        font-size: 22px;
+        color: var(--mainColor);
+        margin: 20px;
+        /* DISPLAY : NONE */
+        display: none;
+    }
+    div.banner-area>div.data>h1:nth-of-type(1){
+        text-align: center;
+        font-size: 32px;
+        margin: 15px 0;
+    }
+    div.banner-area>div.data>p.text{
+        width: 100%;
+        height: auto;
+        line-height: 24px;
+        /* use fr for responsive */
+        font-size: 16px;
+    }
+
+    div.banner-area>div.data>div.banner-button-area{
+        display: flex;
+        width: 100%;
+        margin: 15px 0;
+        justify-content: flex-end;
+    }
+    div.banner-area>div.data>div.banner-button-area>a{
+        display: inline-block;
+        padding: 10px 16px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+        background-color: var(--mainColor);
+        border-radius: 50px;
+        transition: all 300ms linear;
+    }
+    div.banner-area>div.data>div.banner-button-area>a:hover{
+        background-color: #000000;
+    }
+    /* end of data */
+}

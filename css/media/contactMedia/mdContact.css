@@ -1,0 +1,111 @@
+@media (min-width: 768px) and (max-width: 992px) {
+    .contact {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 90%;
+        height: max-content;
+        margin: 25px auto;
+    }
+    /************* contact header ************/
+    div.contact-header{
+        display: flex;
+        flex-flow: column;
+    }
+
+    .contact>div.contact-header>h1 {
+        color: black;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .contact>div.contact-header>p {
+        text-align: center;
+        width: 100%;
+        margin: 30px auto;
+        font-size: 16px;
+    }
+    /************* end of contact header ****************/
+
+    /************* contact content *************/
+    .contact>div.contact-content{
+        display: flex;
+        width: 90%;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    /* contact image */
+    .contact>div.contact-content>div.contact-picture>img {
+        max-width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+    /* end of contact image */
+    /*  contact inputs */
+    .contact>div.contact-content>div.form-area>div.inputs{
+        width: 100%;
+        display: grid;
+        margin: 50px auto;
+        grid-gap: 20px;
+        height: 80%;
+        grid-template-areas:
+    "name email"
+    "msg msg"
+    ;
+    }
+    .contact>div.contact-content>div.form-area>div.inputs>input.input-name{
+        grid-area: name;
+    }
+    .contact>div.contact-content>div.form-area>div.inputs>input.input-email{
+        grid-area: email;
+    }
+    .contact>div.contact-content>div.form-area>div.inputs>textarea#message{
+        grid-area: msg;
+    }
+    .contact>div.contact-content>div.form-area>div.inputs>input{
+        border: 1px solid var(--mainColor);
+        padding: 10px 20px;
+        border-radius: 4px;
+        align-self: center;
+        height: 100%;
+        background-color: transparent;
+        font-size: 15px;
+        direction: rtl;
+    }
+    .contact>div.contact-content>div.form-area>div.inputs>#message {
+        border: 1px solid var(--mainColor);
+        padding: 10px 20px;
+        border-radius: 4px;
+        align-self: start;
+        height: 100%;
+        background-color: transparent;
+        font-size: 15px;
+        direction: rtl;
+        resize: none;
+    }
+    /* end of contact inputs */
+    /* contact button */
+    .contact>div.contact-content>div.form-area>div.send-btn {
+        display: flex;
+        width: 100%;
+        margin: 15px 0;
+        justify-content: center;
+    }
+    .contact>div.contact-content>div.form-area>div.send-btn>a {
+        display: inline-block;
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+        background-color: var(--mainColor);
+        border-radius: 50px;
+        transition: all 300ms linear;
+    }
+    .contact>div.contact-content>div.form-area>div.send-btn>a:hover {
+        background-color: black;
+    }
+    /* end of contact button */
+
+    /************* end of contact content *************/
+
+}

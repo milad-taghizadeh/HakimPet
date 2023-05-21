@@ -1,0 +1,129 @@
+/* about us */
+div.aboutUs{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items:center;
+    height: max-content;
+    margin: 50px auto;
+}
+div.aboutUs>div.about-header{
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+div.aboutUs>div.about-header>h1{
+    font-size: 42px;
+}
+div.aboutUs>div.about-content{
+    width: 60%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+div.aboutUs>div.about-content>img{
+    width: 100%;
+    height: 400px;
+    background-image: url(../assets/images/about.jpg);
+    margin: 40px 0;
+}
+div.aboutUs>div.about-content>p{
+    width: 100%;
+    padding: 40px 0;
+    font-size: 18px;
+    text-align: justify;
+}
+/* end of about us */
+/* callUs */
+
+/* our team */
+div.ourTeam{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.ourTeam>div.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    font-size: 24px;
+}
+div.ourTeam>div.members{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+div.ourTeam>div.members>div.teamMember{
+    width: 25%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: var(--sbsGray);
+}
+div.ourTeam>div.members>div.teamMember>img{
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--mainBlack);
+    object-fit: cover;
+}
+div.ourTeam>div.members>div.teamMember>h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    font-size: 24px;
+}
+div.ourTeam>div.members>div.teamMember>span{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 10px 0;
+}
+/* end of our team */
+
+/* find us */
+div.findUs{
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse ;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+/* address */
+div.address{
+    width: 30%;
+    height: 400px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+div.address>h1{
+    margin: 20px 0;
+    font-size: 42px;
+}
+/* Balad embeded map */
+div.baladMap{
+    width: 90%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border:0;
+}
+iframe.baladMap{
+    width: inherit;
+    height: inherit;
+}

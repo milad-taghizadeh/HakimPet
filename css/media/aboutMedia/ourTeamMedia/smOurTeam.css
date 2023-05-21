@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    div.ourTeam>div.title{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 15px 0;
+        font-size: 22px;
+    }
+    div.ourTeam>div.members{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 25px auto;
+        justify-content: center;
+    }
+
+    div.ourTeam>div.members>div.teamMember{
+        width: 50%;
+    }
+    div.ourTeam>div.members>div.teamMember>img{
+        width: 125px;
+        height: 125px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: var(--mainBlack);
+        object-fit: cover;
+    }
+    div.ourTeam>div.members>div.teamMember>h3{
+        width: 100%;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    div.ourTeam>div.members>div.teamMember>span{
+        display: flex;
+        font-size: 16px;
+        margin: 5px 0;
+    }
+}

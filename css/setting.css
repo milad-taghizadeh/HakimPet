@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --mainColor: rgb(64, 137, 220);
+    --linkColor: #333333 ;
+    --linkColor2: #0b8ecb ;
+    --linkColor3: rgba(188, 188, 188, 0.701);
+    --linkHoverColor : #007bffb0 ;
+    --inputDeactiveColor: #333333 ;
+    --mainBlack : rgb(34, 34, 34);
+    --mainWhite : rgba(228, 228, 228, 0.915) ;
+    --sbsGray : rgba(246, 246, 246, 0.936) ;
+    --mainColorBright : rgb(76, 160, 255);
+}
+
+div.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}

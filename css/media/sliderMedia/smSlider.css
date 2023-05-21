@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    div.slider{
+        width: 100%;
+        height: 420px;
+    }
+}

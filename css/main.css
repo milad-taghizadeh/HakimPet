@@ -1,0 +1,50 @@
+/* setting */
+@import "setting.css";
+/* Login */
+@import "login.css";
+/* Header*/
+@import "header.css";
+@import "media/headerMedia/smHeader.css";
+/* end of Header*/
+
+/* Footer */
+@import "footer.css";
+@import "media/footerMedia/mdfooter.css";
+@import "media/footerMedia/smfooter.css";
+/* end of Footer */
+
+/* Home */
+@import "slider.css";
+@import "media/sliderMedia/mdSlider.css";
+@import "media/sliderMedia/smSlider.css";
+
+@import "banner-area.css";
+@import "media/bannerMedia/lgBanner-area.css";
+@import "media/bannerMedia/mdBanner-area.css";
+@import "media/bannerMedia/smBanner-area.css";
+
+@import "sbs.css";
+@import "media/sbsMedia/mdSbs.css";
+@import "media/sbsMedia/smSbs.css";
+
+@import "contact.css";
+@import "media/contactMedia/lgContact.css";
+@import "media/contactMedia/mdContact.css";
+@import "media/contactMedia/smContact.css";
+
+/* end of Home */
+
+/* About */
+@import "about.css";
+
+@import "media/aboutMedia/aboutUsMedia/smAboutUs.css";
+
+@import "media/aboutMedia/ourTeamMedia/lgOurTeam.css";
+@import "media/aboutMedia/ourTeamMedia/mdOurTeam.css";
+@import "media/aboutMedia/ourTeamMedia/smOurTeam.css";
+
+@import "media/aboutMedia/findUsMedia/lgFindUs.css";
+/* end of About */
+
+/* Clinic */
+@import "clinic.css";
