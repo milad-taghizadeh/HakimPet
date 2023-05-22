@@ -1,6 +1,6 @@
 {
-  "name": "hakimpettest",
-  "version": "2.0.0",
+  "name": "hakimpet",
+  "version": "2.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
