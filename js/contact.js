@@ -15,5 +15,4 @@ function sendEmail() {
 		message => alert("mail sent successfully")
 	);
 }
-document.addEventListener("click", sendEmail());
 

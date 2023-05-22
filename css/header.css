@@ -9,21 +9,23 @@ header>div.logIn{
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
 }
 header>div.logIn>a{
     text-decoration: none;
     font-size: 15px;
     /* font-weight: bold; */
     padding: 14px 20px;
-    color: #000000;
+    color: white;
     border-radius: 8px;
     /* border: 2px black solid; */
     transition: all 200ms linear;
+    background-color: var(--mainColor);
+
 }
 header>div.logIn>a:hover{
     color: whitesmoke;
-    background-color: var(--mainColor);
+    background-color: var(--linkHoverColor);
 }
 /* end of login */
 
