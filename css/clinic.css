@@ -1,12 +1,14 @@
 .clinicBody {
     /* background-color: antiquewhite; */
-    height: 100%;
-    
+    height: 100vh;
+    overflow: hidden;
 }
-.pets {
-    width: 60%;
-    height: 50%;
+
+.requestVet {
+    width: 30%;
+    height: 60%;
     background-color: aqua;
-
-
+    display: flex;
+    align-items: center;
+    justify-self: center;
 }
