@@ -1,14 +1,18 @@
 .clinicBody {
     /* background-color: antiquewhite; */
-    height: 100vh;
-    overflow: hidden;
+    height: 100px;
+    /* width: 100%; */
+    /* overflow: hidden; */
 }
 
 .requestVet {
-    width: 30%;
-    height: 60%;
+    width: 30px;
+    height: 70px;
     background-color: aqua;
-    display: flex;
+    display:flex ;
+    justify-content: center;
     align-items: center;
-    justify-self: center;
+}header {
+    position: absolute;
+    /* background-color: white; */
 }
