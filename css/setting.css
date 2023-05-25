@@ -16,6 +16,7 @@
     --mainWhite : rgba(228, 228, 228, 0.915) ;
     --sbsGray : rgba(246, 246, 246, 0.936) ;
     --mainColorBright : rgb(76, 160, 255);
+    --formColor : rgba(224, 224, 224, 0.733) ;
 }
 
 div.wrapper {
