@@ -16,3 +16,12 @@
     transform: translate(-50% , -50%);
     border-radius: 8px;
 }
+.first, .second, .third, .forth, .fifth{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: flex;
+}
+.second, .third, .forth, .fifth{
+    display: none;
+}
