@@ -20,8 +20,12 @@
     width: 100%;
     height: 100%;
     background-color: red;
-    display: flex;
 }
 .second, .third, .forth, .fifth{
     display: none;
+}
+button{
+    width: 200px;
+    height: 60px;
+    background-color: blue;
 }
