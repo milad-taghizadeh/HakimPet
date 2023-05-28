@@ -4,9 +4,8 @@
 }
 
 .requestVet {
-    width: 23%;
-    height: 48%;
-    background-color: var(--formColor);
+    width: 24%;
+    height: 53%;
     display:flex ;
     justify-content: center;
     align-items: center;
@@ -19,13 +18,14 @@
 .first, .second, .third, .forth, .fifth{
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: var(--formColor);
+
 }
 .second, .third, .forth, .fifth{
     display: none;
 }
 button{
-    width: 200px;
-    height: 60px;
-    background-color: blue;
+    width: 60px;
+    height: 30px;
+    background-color:var(--mainColor);
 }

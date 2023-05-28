@@ -1,6 +1,6 @@
 
 let pedaret = document.querySelector("div.first");
-function babat() {
+function hideSlide() {
     pedaret.style.display = 'none';
 }
 console.log(pedaret.innerHTML);
