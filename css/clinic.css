@@ -6,26 +6,43 @@
 .requestVet {
     width: 24%;
     height: 53%;
-    display:flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     border-radius: 8px;
 }
-.first, .second, .third, .forth, .fifth{
+
+.first,
+.second,
+.third,
+.forth,
+.fifth {
     width: 100%;
     height: 100%;
     background-color: var(--formColor);
 
 }
-.second, .third, .forth, .fifth{
+
+.second,
+.third,
+.forth,
+.fifth {
     display: none;
 }
-button{
-    width: 60px;
-    height: 30px;
-    background-color:var(--mainColor);
+
+button {
+    width: 25%;
+    height: 8%;
+    background-color: var(--mainColor);
+    border-radius: 8px;
+    color: white;
+    transition: all 200ms linear;
+    border: none;
+}
+button:hover {
+    background-color: var(--linkHoverColor);
 }
