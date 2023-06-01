@@ -6,7 +6,7 @@
 }
 
 :root {
-    --mainColor: rgb(64, 137, 220);
+    --mainColor: #87ceeb;
     --linkColor: #333333 ;
     --linkColor2: #0b8ecb ;
     --linkColor3: rgba(188, 188, 188, 0.701);
