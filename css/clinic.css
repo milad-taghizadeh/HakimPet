@@ -13,7 +13,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 8px;
+    padding: 8px;
 }
 
 .first,
@@ -25,6 +25,8 @@
     height: 100%;
     padding: 8px;
     background-color: var(--formColor);
+    border-radius: 8px;
+
 }
 
 .second,
@@ -54,6 +56,7 @@ button:hover {
 }
 
 input{
+    padding: 8px;
     direction: ltr;
     border-radius: 8px;
     border: 1px solid var(--linkHoverColor);
