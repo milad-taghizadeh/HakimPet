@@ -7,19 +7,19 @@ let form5 = document.querySelector("div.fifth");
 
 function hideSlide1() {
     form1.style.display = 'none';
-    form2.style.display = 'block';
+    form2.style.display = 'flex';
 }
 function hideSlide2() {
     form2.style.display = 'none';
-    form3.style.display = 'block';
+    form3.style.display = 'flex';
 }
 function hideSlide3() {
     form3.style.display = 'none';
-    form4.style.display = 'block';
+    form4.style.display = 'flex';
 }
 function hideSlide4() {
     form4.style.display = 'none';
-    form5.style.display = 'block';
+    form5.style.display = 'flex';
 }
 function hideSlide5() {
     form5.style.display = 'none';

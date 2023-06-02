@@ -4,8 +4,8 @@
 }
 
 .requestVet {
-    width: 24%;
-    height: 53%;
+    width: 350px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,8 +23,8 @@
 .fifth {
     width: 100%;
     height: 100%;
+    padding: 8px;
     background-color: var(--formColor);
-
 }
 
 .second,
@@ -32,17 +32,93 @@
 .forth,
 .fifth {
     display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
     width: 25%;
-    height: 8%;
+    height: 50px;
+    margin: 16px 0;
     background-color: var(--mainColor);
     border-radius: 8px;
+    font-size: 16px;
     color: white;
     transition: all 200ms linear;
     border: none;
+    cursor: pointer;
 }
 button:hover {
     background-color: var(--linkHoverColor);
+}
+
+input{
+    direction: ltr;
+    border-radius: 8px;
+    border: 1px solid var(--linkHoverColor);
+}
+
+.first{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.first>label{
+    margin: 16px 0;
+    font-size: 24px;
+}
+.first>input#phone{
+    width: 80%;
+    margin: 16px 0;
+    font-size: 24px;
+}
+.first>input#confirm{
+    width: 60%;
+    margin: 16px 0;
+    font-size: 24px;
+}
+input[type=radio]:checked{
+    background-color: red;
+}
+
+.second>.pet{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: row;
+}
+.second>.pet>label{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 8px;
+    overflow: hidden;
+}
+.second>.pet>label>img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 300ms linear;
+}
+.second>.pet>label:hover>img{
+    transform: scale(1.2);
+}
+
+.third>label{
+    font-size: 26px;
+}
+.third>input{
+    width: 80%;
+    margin: 8px 0;
+    font-size: 24px;
+}
+
+.forth>label{
+    font-size: 26px;
+    margin: 8px 0;
+}
+.forth>input{
+    font-size: 26px;
+    margin: 8px 0;
 }

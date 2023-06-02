@@ -36,24 +36,40 @@
     <!-- end header -->
     <div class="requestVet">
         <div class="first">
-            <input type="text" name="" id="">
+            <label for="phone">شماره تماس</label>
+            <input type="tel" name="phone" id="phone" maxlength="11" placeholder="09**" required>
+            <label for="confirm">کد تایید</label>
+            <input type="number" name="confirm" id="confirm" required>
             <button class="Next" onclick="hideSlide1()">مرحله بعد</button>
         </div>
         <div class="second">
-            <input type="text" name="" id="" placeholder="2">
+            <h2>پت شما</h2>
+            <div class="pet">
+                <input type="radio" id="dog" name="pet" value="dog">
+                <label for="dog"><img src="./assets/clinic%20images/dog.jpg" alt="dog"></label>
+                <input type="radio" id="cat" name="pet" value="cat">
+                <label for="cat"><img src="./assets/clinic%20images/cat.jpg" alt="cat"></label>
+            </div>
             <button class="Next" onclick="hideSlide2()">مرحله بعد</button>
         </div>
         <div class="third">
-            <input type="text" name="" id="" placeholder="3">
+            <label for="firstName">نام و نام خانوادگی</label>
+            <input type="text" name="firstName" id="firstName">
+            <label for="providence">استان</label>
+            <input type="text" name="providence" id="providence">
+            <label for="address">آدرس</label>
+            <input type="text" name="address" id="address">
             <button class="Next" onclick="hideSlide3()">مرحله بعد</button>
         </div>
         <div class="forth">
-            <input type="text" name="" id="" placeholder="4">
+            <label for="date">تاریخ و ساعت ارسال</label>
+            <input type="text" name="date" id="date">
             <button class="Next" onclick="hideSlide4()">مرحله بعد</button>
         </div>
         <div class="fifth">
-            <input type="text" name="" id="" placeholder="5">
-            <button class="Next" onclick="hideSlide5()">مرحله بعد</button>
+            <h2>از خرید شما متشکریم</h2>
+<!--            <input type="text" name=""  placeholder="5">-->
+<!--            <button class="Next" onclick="hideSlide5()">مرحله بعد</button>-->
         </div>
     </div>
 
