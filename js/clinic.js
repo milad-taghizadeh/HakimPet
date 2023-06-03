@@ -6,6 +6,7 @@ let form5 = document.querySelector("div.fifth");
 
 function hideSlide1() {
     form1.style.display = 'none';
+    form2.style.transition = '  transition: visibility 2s, opacity 2s linear;';
     form2.style.display = 'flex';
 }
 function hideSlide2() {

@@ -13,7 +13,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 8px;
+    padding: 0px;
 }
 
 .first,
@@ -26,7 +26,6 @@
     padding: 8px;
     background-color: var(--formColor);
     border-radius: 8px;
-
 }
 
 .second,
@@ -37,6 +36,7 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+
 }
 
 button {
@@ -97,12 +97,15 @@ input[type=radio]:checked{
     cursor: pointer;
     margin: 8px;
     overflow: hidden;
+    border-radius: 100%;
+
 }
 .second>.pet>label>img{
     width: 150px;
     height: 150px;
     object-fit: cover;
     transition: all 300ms linear;
+
 }
 .second>.pet>label:hover>img{
     transform: scale(1.2);
@@ -123,7 +126,9 @@ input[type=radio]:checked{
 }
 .forth>input{
     font-size: 26px;
-    margin: 8px 0;
+    width: 80%;
+
+    /*margin: 8px 0;*/
 }
 .requestVet>div>button {
     height: auto;
