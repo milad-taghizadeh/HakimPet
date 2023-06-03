@@ -1,4 +1,3 @@
-
 let form1 = document.querySelector("div.first");
 let form2 = document.querySelector("div.second");
 let form3 = document.querySelector("div.third");
@@ -20,4 +19,8 @@ function hideSlide3() {
 function hideSlide4() {
     form4.style.display = 'none';
     form5.style.display = 'flex';
+}
+
+function goHome() {
+    location.href = "./../index.html";
 }
