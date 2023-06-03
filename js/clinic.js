@@ -21,6 +21,3 @@ function hideSlide4() {
     form4.style.display = 'none';
     form5.style.display = 'flex';
 }
-function hideSlide5() {
-    form5.style.display = 'none';
-}
