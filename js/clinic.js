@@ -22,5 +22,5 @@ function hideSlide4() {
 }
 
 function goHome() {
-    location.href = "./../index.html";
+    location.href = "index.html";
 }
