@@ -14,5 +14,5 @@
     width: 24%;
     height: 100%;
     border: 4px solid var(--mainColorBright);
-    border-radius: 100%;
+    border-radius: 9px;
 }
