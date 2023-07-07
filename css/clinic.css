@@ -23,8 +23,9 @@
     width: 100%;
     height: 100%;
     padding: 8px;
-    background-color: var(--formColor);
+    /*background-color: var(--formColor);*/
     border-radius: 8px;
+    border: 1px solid var(--mainColor);
 }
 
 .second,
@@ -67,7 +68,7 @@ input{
     justify-content: center;
     align-items: center;
 }
-.first>label{
+.first>label {
     margin: 16px 0;
     font-size: 24px;
 }
