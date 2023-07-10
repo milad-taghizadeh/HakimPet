@@ -17,19 +17,36 @@
     flex-direction: column;
     align-items: center;
 }
-.selections>div>button.sendVet{
-    background-image: url("./");
+.sendVet {
+    background-image: url("../assets/clinic icons/icon png/mockup-icon-1-06.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dogM{
+    background-image: url("../assets/clinic icons/icon png/mockup-icon-1-05.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.catM{
+    background-image: url("../assets/clinic icons/icon png/mockup-icon-1-05.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.vaccine{
+    background-image: url("../assets/clinic icons/icon png/mockup-icon-1-03.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .selections>div>h3{
     font-size: 18px;
 }
 .srvcBtn{
     border-radius: 50%;
-    height: 10vw;
-    width: 10vw;
-    /*background-color: white;*/
+    height: 12vw;
+    width: 12vw;
+    background-color: white;
 
 }
 .srvcBtn:hover {
-    background-color: #d2d2d2;
+    background-color: rgba(210, 210, 210, 0.4);
 }
