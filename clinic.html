@@ -37,10 +37,18 @@
     <div class="requestVet">
         <div class="first">
             <img src="./assets/clinic%20icons/icon%20png/icon-1-2.png" class="icon" alt="icon">
-            <label for="phone">شماره تماس</label>
-            <input type="tel" name="phone" id="phone" maxlength="11" placeholder="09**" required>
-            <label for="confirm">کدتایید</label>
-            <input type="number" name="confirm" id="confirm" required>
+
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                <label for="name" class="form__label">شماره تماس</label>
+            </div>
+            
+<!--            <label for="phone">شماره تماس</label>-->
+<!--            <input type="tel" name="phone" id="phone" maxlength="11" placeholder="09**" required>-->
+            <div class="form__group field">
+                <input type="text" class="form__field" placeholder="Name" name="name" id='name' required />
+                <label for="name" class="form__label">کد تایید</label>
+            </div>
             <button class="Next" onclick="hideSlide1()">مرحله بعد</button>
         </div>
         <div class="second">
