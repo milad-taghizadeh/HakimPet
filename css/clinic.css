@@ -26,17 +26,35 @@
     /*background-color: var(--formColor);*/
     border-radius: 8px;
     border: 1px solid var(--mainColor);
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
+
 
 .second,
 .third,
 .forth,
 .fifth {
-    display: none;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    display:none;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 
+}
+.hide{
+    opacity: 0;
+
+}
+.show {
+    opacity: 1;
 }
 
 button {
@@ -140,22 +158,23 @@ img.icon{
     width: 128px;
     height: 128px;
 }
+
 /* inputs */
 
 .form__group {
     position: relative;
     padding: 15px 0 0;
     margin-top: 10px;
-    width: 50%;
+    width: 70%;
 }
 .form__field {
     font-family: inherit;
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid var(--mainColor);
     outline: 0;
     font-size: 1.3rem;
-    color: #fff;
+    color: black;
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
@@ -164,9 +183,9 @@ img.icon{
     color: transparent;
 }
 .form__field:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     cursor: text;
-    top: 20px;
+    top: 24px;
 }
 .form__label {
     position: absolute;
@@ -174,13 +193,13 @@ img.icon{
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #9b9b9b;
+    color: var(--linkColor3);
 }
 .form__field:focus {
     padding-bottom: 6px;
     font-weight: 700;
     border-width: 3px;
-    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image: linear-gradient(to right, var(--linkColor2), var(--linkColor2));
     border-image-slice: 1;
 }
 .form__field:focus ~ .form__label {
@@ -189,8 +208,8 @@ img.icon{
     display: block;
     transition: 0.2s;
     font-size: 1rem;
-    color: #11998e;
-    font-weight: 700;
+    color: var(--linkColor2);
+    font-weight: 500;
 }
 /* reset input */
 .form__field:required, .form__field:invalid {

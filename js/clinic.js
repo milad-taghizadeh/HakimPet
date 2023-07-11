@@ -5,20 +5,26 @@ let form4 = document.querySelector("div.forth");
 let form5 = document.querySelector("div.fifth");
 
 function hideSlide1() {
-    form1.style.display = 'none';
-    form2.style.transition = '  transition: visibility 2s, opacity 2s linear;';
+    form1.classList.add("hide")
+    form2.classList.add("show")
     form2.style.display = 'flex';
 }
 function hideSlide2() {
-    form2.style.display = 'none';
+    form2.classList.add("hide")
+    form2.classList.remove("show")
+    form3.classList.add("show")
     form3.style.display = 'flex';
 }
 function hideSlide3() {
-    form3.style.display = 'none';
+    form3.classList.add("hide")
+    form3.classList.remove("show")
+    form4.classList.add("show")
     form4.style.display = 'flex';
 }
 function hideSlide4() {
-    form4.style.display = 'none';
+    form4.classList.add("hide")
+    form4.classList.remove("show")
+    form5.classList.add("show")
     form5.style.display = 'flex';
 }
 
