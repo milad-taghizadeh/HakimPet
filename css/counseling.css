@@ -1,0 +1,18 @@
+.counselingBody {
+    height: 100vh;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+.description{
+    width: 85%;
+    height: 70%;
+    /*background-color: #0b8ecb;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px;
+    line-height: 1.8em;
+    text-align: justify;
+}
