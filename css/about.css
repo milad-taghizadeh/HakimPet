@@ -34,6 +34,7 @@ div.aboutUs>div.about-content>p{
     width: 100%;
     padding: 40px 0;
     font-size: 18px;
+    line-height: 2.1rem;
     text-align: justify;
 }
 /* end of about us */
