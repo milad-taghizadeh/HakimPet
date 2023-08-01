@@ -9,4 +9,4 @@ function catM(){
 }
 function vaccine() {
     location.href = ""
-}
+}  
