@@ -18,7 +18,7 @@ function hideSlide2() {
 function hideSlide3() {
     form3.classList.add("hide")
     form3.classList.remove("show")
-    form4.classList.add("show")
+    fo0rm4.classList.add("show")
     form4.style.display = 'flex';
 }
 function hideSlide4() {
