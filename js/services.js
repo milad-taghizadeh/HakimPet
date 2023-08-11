@@ -1,5 +1,5 @@
 function sendVet() {
-    location.href = "clinic.html"
+    location.href = "sendVet.html"
 }
 function dogM() {
     location.href = ""
