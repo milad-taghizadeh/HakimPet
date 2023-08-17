@@ -8,5 +8,5 @@ function catM(){
     location.href = ""
 }
 function vaccine() {
-    location.href = ""
+    location.href = "vaccine.html"
 }  
