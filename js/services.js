@@ -1,10 +1,10 @@
 function sendVet() {
     location.href = "sendVet.html"
 }
-function dogM() {
-    location.href = ""
+function counseling() {
+    location.href = "counseling.html"
 }
-function catM(){
+function food(){
     location.href = ""
 }
 function vaccine() {
