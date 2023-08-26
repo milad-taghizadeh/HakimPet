@@ -33,9 +33,14 @@ header>div.logIn>a:hover{
 header>div.menu{
     width: 50%;
     height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
 }
 header>div.menu>nav{
-    width: 100%;
+    width: 80%;
     height: 100%;
 }
 header>div.menu>nav>ul{
