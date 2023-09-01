@@ -8,6 +8,8 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 aside {
