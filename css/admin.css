@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+aside {
+    background-color: #f2f2f2;
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li button {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+nav li button:hover {
+    background-color: #ccc;
+}
+
+main {
+    padding: 20px;
+    margin-left: 220px;
+}
+
+section {
+    display: none;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
