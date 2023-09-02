@@ -1,22 +1,22 @@
 javascript
-function showDashboard() {
+function showMessages() {
     hideAllSections();
-    document.getElementById("dashboard").style.display = "block";
+    document.getElementById("messages").style.display = "block";
 }
 
-function showUsers() {
+function showFood() {
     hideAllSections();
-    document.getElementById("users").style.display = "block";
+    document.getElementById("food").style.display = "block";
 }
 
-function showProducts() {
+function showSendVet() {
     hideAllSections();
-    document.getElementById("products").style.display = "block";
+    document.getElementById("sendVet").style.display = "block";
 }
 
-function showSettings() {
+function showVaccine() {
     hideAllSections();
-    document.getElementById("settings").style.display = "block";
+    document.getElementById("vaccine").style.display = "block";
 }
 
 function hideAllSections() {
@@ -27,4 +27,4 @@ function hideAllSections() {
 }
 
 // Show the dashboard section by default
-showDashboard();
+showMessages();

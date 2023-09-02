@@ -8,37 +8,42 @@
     
 </head>
 <body>
+    <div class="wrapper">
+
     <header>
         <h1>حکیم پت</h1>
     </header>
     <aside>
         <nav>
             <ul>
-                <li><button onclick="showDashboard()">پیام ها</button></li>
-                <li><button onclick="showUsers()">مشاوره غذا</button></li>
-                <li><button onclick="showProducts()">ارسال دامپزشک</button></li>
-                <li><button onclick="showSettings()">واکسیناسیون</button></li>
+                <li><button onclick="showMessages()">پیام ها</button></li>
+                <li><button onclick="showFood()">مشاوره غذا</button></li>
+                <li><button onclick="showSendVet()">ارسال دامپزشک</button></li>
+                <li><button onclick="showVaccine()">واکسیناسیون</button></li>
             </ul>
         </nav>
     </aside>
     <main>
-        <section id="dashboard">
+        <section id="messages">
             <h2>Dashboard</h2>
             <p>This is the dashboard section.</p>
         </section>
-        <section id="users">
+        <section id="food">
             <h2>Users</h2>
             <p>This is the users section.</p>
         </section>
-        <section id="products">
+        <section id="sendVet">
             <h2>Products</h2>
             <p>This is the products section.</p>
         </section>
-        <section id="settings">
+        <section id="vaccine">
             <h2>Settings</h2>
             <p>This is the settings section.</p>
         </section>
     </main>
+
+    </div>
+
 
     <script src="js/admin.js"></script>
 </body>
