@@ -1,6 +1,6 @@
 // dependency imports
 const jwt = require("jsonwebtoken");
-const User = require("../models/Users");
+const User = require("../models/User");
 
 // A middleware function to validate TOKEN
 const verifyToken = (req, res, next) => {
