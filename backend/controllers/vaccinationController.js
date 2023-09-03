@@ -16,7 +16,7 @@ const createVaccination = async (req, res) => {
     const newVaccination = new Vaccination(req.body);
 
     // save to the db
-    const savedVaccination = newVaccination.save();
+    const savedVaccination = await newVaccination.save();
 
     // set the response
     res.status(200).json(savedVaccination);
@@ -41,7 +41,7 @@ const updateVaccination = async (req, res) => {
     //validate input
     await validator.validateAsync(req.body);
 
-    const updatedVaccination = Vaccination.findbyIdAndUpdate(
+    const updatedVaccination = await Vaccination.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
@@ -50,7 +50,7 @@ const updateVaccination = async (req, res) => {
     );
 
     // set the response
-    res.status(200).json(updateVaccination);
+    res.status(200).json(updatedVaccination);
   } catch (err) {
     // return an err if there is one
     res.status(502).json(err);
@@ -66,12 +66,12 @@ const deleteVaccination = async (req, res) => {
         .json({ massage: "the request does'nt have an id params" });
 
     // delete the record
-    const deletedVaccination = await Vaccination.findbyIdAndDelete(
+    const deletedVaccination = await Vaccination.findByIdAndDelete(
       req.params.id
     );
 
     // set the response
-    if (deleteVaccination == null)
+    if (deletedVaccination == null)
       return res
         .status(404)
         .json({ massage: "there is no Vaccination form with that Id" });
@@ -79,6 +79,7 @@ const deleteVaccination = async (req, res) => {
     res.status(200).json("vaccination Form deleted successfully !");
   } catch (err) {
     // return an err if there is one
+    console.log(err);
     res.status(502).json(err);
   }
 };

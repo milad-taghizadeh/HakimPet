@@ -15,7 +15,7 @@ const createMassage = async (req, res) => {
     const massage = new Massage(req.body);
 
     // save to DB
-    const savedMassage = massage.save();
+    const savedMassage = await massage.save();
 
     // set the response
     res.status(200).json(savedMassage);
@@ -40,7 +40,7 @@ const updateMassage = async (req, res) => {
     await validator.validateAsync(req.body);
 
     // find and update
-    const updatedMassage = await Massage.findbyIdAndUpdate(
+    const updatedMassage = await Massage.findByIdAndUpdate(
       req.params.id,
       {
         $set: req.body,
@@ -49,9 +49,10 @@ const updateMassage = async (req, res) => {
     );
 
     // set the response
-    res.status(200).json(updateMassage);
+    res.status(200).json(updatedMassage);
   } catch (err) {
     // return the err if there is one
+    console.log(err);
     res.status(502).json(err);
   }
 };
@@ -64,15 +65,17 @@ const deleteMassage = async (req, res) => {
         .json({ massage: "the request does'nt have an id params" });
 
     //find massage and delete
-    const deletedMassage = await Massage.findbyIdAndDelete(req.params.id);
+    const deletedMassage = await Massage.findByIdAndDelete(req.params.id);
 
     //set the response
-    if (deleteMassage == null)
+    if (deletedMassage == null)
       return res
         .status(404)
         .json({ massage: "there is no massage form with that Id" });
 
-    res.status(200).json(deleteMassage);
+    res
+      .status(200)
+      .json({ deletedMassage, massage: "the massage has been deleted" });
   } catch (err) {
     // return the err if there is one
     res.status(502).json(err);

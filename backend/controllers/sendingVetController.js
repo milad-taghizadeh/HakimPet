@@ -53,7 +53,7 @@ const updateSV = async (req, res) => {
     );
 
     // set the response
-    res.status(200).json(updateSV);
+    res.status(200).json(updatedSV);
   } catch (err) {
     // return an err if there is one
     res.status(502).json(err);
@@ -91,7 +91,7 @@ const getSVById = async (req, res) => {
         .json({ massage: "the request does'nt have an id params" });
 
     // find the comment by id
-    const sv = SV.findById(req.params.id);
+    const sv = await SV.findById(req.params.id);
 
     // set response
     if (sv == null)
@@ -100,6 +100,7 @@ const getSVById = async (req, res) => {
     res.status(200).json(sv);
   } catch (err) {
     // return an err if there is one
+    console.log(err);
     res.status(502).json(err);
   }
 };

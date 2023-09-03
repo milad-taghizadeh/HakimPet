@@ -27,12 +27,16 @@ const verifyToken = (req, res, next) => {
 const verifyTokenAndAuth = (req, res, next) => {
   // call the verifyToken function
   verifyToken(req, res, async () => {
-    const DbUser = await User.findById(req.user.id);
-    //check the AUTH
-    if (DbUser) {
-      next();
-    } else {
-      res.status(403).json("You are not allowed to do that!");
+    try {
+      const DbUser = await User.findById(req.user.id);
+      //check the AUTH
+      if (DbUser) {
+        next();
+      } else {
+        res.status(403).json("You are not allowed to do that!");
+      }
+    } catch (err) {
+      res.status(500).json(err);
     }
   });
 };
@@ -41,13 +45,20 @@ const verifyTokenAndAuth = (req, res, next) => {
 const verifyTokenAndAdmin = (req, res, next) => {
   // call the verifyToken function
   verifyToken(req, res, async () => {
-    //check the ADMIN
-    const DbUser = await User.findById(req.user.id);
-
-    if (DbUser.isAdmin == true) {
-      next();
-    } else {
-      res.status(403).json("You are not allowed to do that!");
+    try {
+      //check the ADMIN
+      const DbUser = await User.findById(req.user.id);
+      if (!DbUser) {
+        return res.status(403).json("You are not allowed to do that!");
+      }
+      if (DbUser.isAdmin == true) {
+        next();
+      } else {
+        res.status(403).json("You are not allowed to do that!");
+      }
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
     }
   });
 };

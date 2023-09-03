@@ -88,6 +88,7 @@ const logInController = async (req, res) => {
     }
   } catch (err) {
     // return the err if there is one
+    console.log(err);
     res.status(502).json(err);
   }
 };
