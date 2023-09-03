@@ -8,7 +8,9 @@ const userValidation = require("../validators/userValidator");
 const registerController = async (req, res) => {
   try {
     if (!req.body)
-      return res.status(400).json(" the request doesn't have a body ");
+      return res
+        .status(400)
+        .json({ massage: "the request doesn't have a body" });
 
     // validate by Joi
     await userValidation.validateAsync(req.body);
@@ -36,6 +38,11 @@ const registerController = async (req, res) => {
 // user Login Controller
 const logInController = async (req, res) => {
   try {
+    if (!req.body)
+      return res
+        .status(400)
+        .json({ massage: "the request doesn't have a body" });
+
     // find the user By email
     const user = await User.findOne({
       email: req.body.email,
@@ -43,7 +50,7 @@ const logInController = async (req, res) => {
 
     // if there is not a user with that info
     if (user == null) {
-      res.status(401).json(" Wrong UserName or password !!");
+      return res.status(401).json(" Wrong UserName or password !!");
     } else {
       // decrypt the PASSWORD from the DB user
       const hashedPassword = CryptoJS.AES.decrypt(
@@ -70,9 +77,9 @@ const logInController = async (req, res) => {
 
       // if the password doesn't match
       if (inputPassword !== originalPassword) {
-        res.status(401).json("Wrong UserName or password !!");
+        return res.status(401).json("Wrong UserName or password !!");
       } else {
-        // if it maches we return the object without thw PASSWORD and the access token
+        // if it matches we return the object without thw PASSWORD and the access token
         res
           .status(200)
           .cookie("accessToken", accessToken, { httpOnly: true })

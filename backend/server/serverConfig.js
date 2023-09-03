@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 
 // routers imports
 const authRouter = require("../routers/auth");
+const userRouter = require("../routers/user");
 
 //use the routers and middleware , Export the function
 module.exports = function (app) {
@@ -19,4 +20,5 @@ module.exports = function (app) {
 
   // set the routers
   app.use("/api/v0/auth", authRouter);
+  app.use("/api/v0/user", userRouter);
 };
