@@ -75,7 +75,7 @@ const deleteSV = async (req, res) => {
     if (deletedSV == null)
       return res.status(404).json("there is no sending Vet Form with that Id");
 
-    res.status(200).json("comment deleted successfully !");
+    res.status(200).json("sending vet Form deleted successfully !");
   } catch (err) {
     // return an err if there is one
     res.status(502).json(err);
