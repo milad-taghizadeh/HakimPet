@@ -218,8 +218,8 @@ img.icon{
 
 /*New CSS*/
 .formBox {
-    height: 70%;
-    width: 80%;
+    height: 400px;
+    width: 500px;
     background-color: var(--mainWhite);
     position: absolute;
     top: 50%;
@@ -229,4 +229,37 @@ img.icon{
     margin-top: 15px;
     border: 4px solid var(--mainColor);
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.formBox>form{
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formBox>form>label{
+    padding: 16px 64px;
+    margin: 32px 0;
+    font-size: 24px;
+    background: var(--mainBlack);
+    color: var(--mainWhite);
+    border-radius: 8px;
+}
+.formBox>form>input{
+    margin: 24px 0;
+    font-size: 24px;
+}
+.formBox>form>input:nth-of-type(2){
+    padding: 12px 32px;
+    background: var(--linkColor2);
+    color: var(--mainWhite);
+    transition: all 300ms linear;
+    cursor: pointer;
+}
+.formBox>form>input:nth-of-type(2):hover{
+    background: var(--linkColor3);
+    color: var(--mainBlack);
 }

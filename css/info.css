@@ -1,0 +1,85 @@
+div.information{
+    width: 100%;
+    height: auto;
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--mainWhite);
+}
+div.information>form{
+    display: grid;
+    grid-template-areas:
+    'name namelabel'
+    'lastname lastnamelabel'
+    'pet petlabel'
+    'size sizelabel'
+    'vaccine vaccinelabel'
+    'address addresslabel'
+;
+    font-size: 24px;
+}
+div.information>form>*{
+    margin: 16px 8px;
+    direction: rtl;
+}
+div.information>form>label:nth-of-type(1){
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+}
+div.information>form>input:nth-of-type(1){
+    grid-area: namelabel;
+    width: 300px;
+    height: 48px;
+}
+div.information>form>label:nth-of-type(2){
+    grid-area: lastname;
+    display: flex;
+    justify-content: center;
+}
+div.information>form>input:nth-of-type(2){
+    grid-area: lastnamelabel;
+    width: 300px;
+    height: 48px;
+}
+div.information>form>label:nth-of-type(3){
+    grid-area: pet;
+    display: flex;
+    justify-content: center;
+}
+div.information>form>select:nth-of-type(1){
+    grid-area: petlabel;
+}
+div.information>form>label:nth-of-type(4){
+    grid-area: size;
+    display: flex;
+    justify-content: center;
+}
+div.information>form>select:nth-of-type(2){
+    grid-area: sizelabel;
+}
+div.information>form>label:nth-of-type(5){
+    grid-area: vaccine;
+    display: flex;
+    justify-content: center;
+}
+div.information>form>select:nth-of-type(3){
+    grid-area: vaccinelabel;
+}
+div.information>form>label:nth-of-type(6){
+    grid-area: address;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.information>form>textarea{
+    grid-area: addresslabel;
+    width: 300px;
+    height: 200px;
+    padding: 16px;
+    resize: none;
+}
+div.information>form>select{
+    font-size: 20px;
+    padding: 10px;
+}
