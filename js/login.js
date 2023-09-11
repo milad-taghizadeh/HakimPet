@@ -1,17 +1,15 @@
-const loginText = document.querySelector(".title-text .login");
-      const loginForm = document.querySelector("form.login");
-      const loginBtn = document.querySelector("label.login");
-      const signupBtn = document.querySelector("label.signup");
-      const signupLink = document.querySelector("form .signup-link a");
-      signupBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "-50%";
-        loginText.style.marginLeft = "-50%";
-      });
-      loginBtn.onclick = (()=>{
-        loginForm.style.marginLeft = "0%";
-        loginText.style.marginLeft = "0%";
-      });
-      signupLink.onclick = (()=>{
-        signupBtn.click();
-        return false;
-      });
+document.getElementById('login-button').addEventListener('click', function () {
+  document.getElementById('form-title').textContent = 'ورود';
+  document.getElementById('login-form').classList.remove('hidden');
+  document.getElementById('signup-form').classList.add('hidden');
+  document.getElementById('login-button').classList.add('active');
+  document.getElementById('signup-button').classList.remove('active');
+});
+
+document.getElementById('signup-button').addEventListener('click', function () {
+  document.getElementById('form-title').textContent = 'ثبت نام';
+  document.getElementById('signup-form').classList.remove('hidden');
+  document.getElementById('login-form').classList.add('hidden');
+  document.getElementById('signup-button').classList.add('active');
+  document.getElementById('login-button').classList.remove('active');
+});
