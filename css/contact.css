@@ -56,7 +56,7 @@ div.contact-header{
 .contact>div.contact-content>div.form-area>div.inputs>input.input-email{
     grid-area: email;
 }
-.contact>div.contact-content>div.form-area>div.inputs>textarea#message{
+.contact>div.contact-content>div.form-area>div.inputs>textarea.message{
     grid-area: msg;
 }
 .contact>div.contact-content>div.form-area>div.inputs>input{
@@ -69,7 +69,7 @@ div.contact-header{
     font-size: 15px;
     direction: rtl;
 }
-.contact>div.contact-content>div.form-area>div.inputs>#message {
+.contact>div.contact-content>div.form-area>div.inputs>.message {
     border: 1px solid var(--mainColor);
     padding: 10px 20px;
     border-radius: 4px;
