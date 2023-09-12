@@ -1,85 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="css/admin.css">
-    
+
 </head>
+
 <body>
     <div class="wrapper">
 
-    <header>
-        <h1>حکیم پت</h1>
-    </header>
-    <aside>
-        <nav>
-            <ul>
-                <li><button onclick="showMessages()">پیام ها</button></li>
-                <li><button onclick="showFood()">مشاوره غذا</button></li>
-                <li><button onclick="showSendVet()">ارسال دامپزشک</button></li>
-                <li><button onclick="showVaccine()">واکسیناسیون</button></li>
-            </ul>
-        </nav>
-    </aside>
-    <main>
-        <section id="messages">
-            <h2>پیام ها</h2>
+        <header>
+            <h1>حکیم پت</h1>
+        </header>
+        <aside>
+            <nav>
+                <ul>
+                    <li><button onclick="showMessages()">پیام ها</button></li>
+                    <li><button onclick="showFood()">مشاوره غذا</button></li>
+                    <li><button onclick="showSendVet()">ارسال دامپزشک</button></li>
+                    <li><button onclick="showVaccine()">واکسیناسیون</button></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section id="messages">
+                <h2>پیام ها</h2>
+                <div class="content" id="messageBox">
+                </div>
+
+            </section>
+            <section id="food">
+                <h2>مشاوره غذا</h2>
+                <p>This is the users section.</p>
+            </section>
+
+            <section id="sendVet">
+                <h2>ارسال دامپزشک</h2>
+                <div class="content">
+                    <div class="frame" id="frame">
+                        <div class="name"><span>نام : </span></span>
+                            <p id="Name">میلاد تقی زاده</p>
+                        </div>
+                        <div class="email"><span>آدرس ایمیل : </span></span>
+                            <p id="Email">miladtaghizadeh@gmail.com</p>
+                        </div>
+                        <div class="address"><span>آدرس : </span></span>
+                            <p id="Address">تهران شهرک غرب بلوار اندرزگو خیابان آزادی</p>
+                        </div>
+                        <div class="number"><span>شماره تلفن : </span></span>
+                            <p id="Number">09391234567</p>
+                        </div>
+                        <div class="pet"><span>حیوان : </span></span>
+                            <p id="Pet">سگ</p>
+                        </div>
+                        <div class="sendVetDate"><span>تاریخ درخواستی : </span></span>
+                            <p id="SendVetDate">07.07.2003</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <section id="vaccine">
+                <h2>واکسیناسیون</h2>
                 <div class="content">
                     <div class="frame">
-                        <div class="name"><span>نام : </span></span><p id="Name">میلاد تقی زاده</p></div>
-                        <div class="email"><span>آدرس ایمیل : </span></span><p id="Email">miladtaghizadeh@gmail.com</p></div>
-                        <div class="message"><span>پیام : </span></span><p id="Message">با عرض سلام و خسته نباشید از سایتتون راضی هستم :)))))</p></div>
+                        <div class="name"><span>نام : </span></span>
+                            <p id="Name">میلاد تقی زاده</p>
+                        </div>
+                        <div class="email"><span>آدرس ایمیل : </span></span>
+                            <p id="Email">miladtaghizadeh@gmail.com</p>
+                        </div>
+                        <div class="address"><span>آدرس : </span></span>
+                            <p id="Address">تهران شهرک غرب بلوار اندرزگو خیابان آزادی</p>
+                        </div>
+                        <div class="number"><span>شماره تلفن : </span></span>
+                            <p id="Number">09391234567</p>
+                        </div>
+                        <div class="pet"><span>حیوان : </span></span>
+                            <p id="Pet">سگ</p>
+                        </div>
+                        <div class="vaccineDate"><span>تاریخ واکسن قبلی : </span></span>
+                            <p id="VaccineDate">07.07.2003</p>
+                        </div>
+                        <div class="vaccineType"><span>نوع واکسن درخواستی : </span></span>
+                            <p id="VaccineType">فایزر</p>
+                        </div>
+
                     </div>
-                    <div class="frame">
-                        <div class="name"><span>نام : </span></span><p id="Name">میلادh تقی زاده</p></div>
-                        <div class="email"><span>آدرس ایمیل : </span></span><p id="Email">miladtaghizadeh@gmail.com</p></div>
-                        <div class="message"><span>پیام : </span></span><p id="Message">با عرض سلام و خسته نباشید از سایتتون راضی هستم :)))))</p></div>
-                    </div>
-
                 </div>
-
-        </section>
-        <section id="food">
-            <h2>مشاوره غذا</h2>
-            <p>This is the users section.</p>
-        </section>
-
-        <section id="sendVet">
-            <h2>ارسال دامپزشک</h2>
-            <div class="content">
-                <div class="frame">
-                    <div class="name"><span>نام : </span></span><p id="Name">میلاد تقی زاده</p></div>
-                    <div class="email"><span>آدرس ایمیل : </span></span><p id="Email">miladtaghizadeh@gmail.com</p></div>
-                    <div class="address"><span>آدرس : </span></span><p id="Address">تهران شهرک غرب بلوار اندرزگو خیابان آزادی</p></div>
-                    <div class="number"><span>شماره تلفن : </span></span><p id="Number">09391234567</p></div>
-                    <div class="pet"><span>حیوان : </span></span><p id="Pet">سگ</p></div>
-                    <div class="sendVetDate"><span>تاریخ درخواستی : </span></span><p id="SendVetDate">07.07.2003</p></div>
-                </div>
-
-            </div>
-        </section>
-        <section id="vaccine">
-            <h2>واکسیناسیون</h2>
-            <div class="content">
-                <div class="frame">
-                    <div class="name"><span>نام : </span></span><p id="Name">میلاد تقی زاده</p></div>
-                    <div class="email"><span>آدرس ایمیل : </span></span><p id="Email">miladtaghizadeh@gmail.com</p></div>
-                    <div class="address"><span>آدرس : </span></span><p id="Address">تهران شهرک غرب بلوار اندرزگو خیابان آزادی</p></div>
-                    <div class="number"><span>شماره تلفن : </span></span><p id="Number">09391234567</p></div>
-                    <div class="pet"><span>حیوان : </span></span><p id="Pet">سگ</p></div>
-                    <div class="vaccineDate"><span>تاریخ واکسن قبلی : </span></span><p id="VaccineDate">07.07.2003</p></div>
-                    <div class="vaccineType"><span>نوع واکسن درخواستی : </span></span><p id="VaccineType">فایزر</p></div>
-
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
     </div>
 
 
     <script src="js/admin.js"></script>
 </body>
+
 </html>
