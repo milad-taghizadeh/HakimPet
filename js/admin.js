@@ -34,7 +34,7 @@ fetch('http://localhost:3000/api/v0/massages/')
     .then(response => response.json())
     .then(data => {
         let messageBoxdata = ``;
-        for (let i = 0; i < Object.keys(data).length; i++) {
+        for (let i = Object.keys(data).length - 1; i >= 0; i--) {
             const key = i.toString();
             messageBoxdata += `<div class="frame">
             <div class="name"><span>نام : </span></span><p id="Name">${data[key].name}</p></div>
