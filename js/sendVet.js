@@ -136,7 +136,6 @@ function sendVetData() {
   const date = document.getElementById('shamsi-date').value;
   console.log(document.getElementById('shamsi-date').value);
   const sendVetDate = {
-    userId: "64f4cd691aa78515f257d329",
     date: date
   };
   fetch('http://localhost:3000/api/v0/SV/', {

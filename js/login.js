@@ -40,6 +40,7 @@ function signUp() {
         .then(response => response.json())
         .then(signupData => {
             console.log('Success:', signupData);
+            window.location.href = 'index.html';
         })
         .catch(error => {
             console.error('Error:', error);
@@ -50,8 +51,6 @@ document.getElementById('Login').addEventListener('click', logIn);
 function logIn() {
     const email = document.getElementById('LoginEmail').value;
     const password = document.getElementById('LoginPassword').value;
-    console.log(email);
-    console.log(password);
     const loginData = {
         password: password,
         email: email
@@ -64,8 +63,10 @@ function logIn() {
         body: JSON.stringify(loginData)
     })
     .then(response => response.json())
-    .then(signupData => {
-        console.log('Success:', signupData);
+    .then(loginData => {
+        console.log('Success:', loginData);
+        window.location.href = 'index.html';
+        alert('Login Successful');
     })
     .catch(error => {
         console.error('Error:', error);
