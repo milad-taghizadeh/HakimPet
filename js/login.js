@@ -30,7 +30,7 @@ function signUp() {
         address: address,
         phoneNumber: phoneNumber
     };
-    fetch('http://localhost:3000/api/v0/auth/register', {
+    fetch('http://localhost:3000/api/v0/auth/register' , {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -48,24 +48,26 @@ function signUp() {
 // Login
 document.getElementById('Login').addEventListener('click', logIn);
 function logIn() {
-    const email = document.getElementById('LoginEmail');
-    const password = document.getElementById('LoginPassword');
+    const email = document.getElementById('LoginEmail').value;
+    const password = document.getElementById('LoginPassword').value;
+    console.log(email);
+    console.log(password);
     const loginData = {
-        "password": password,
-        "email": email
+        password: password,
+        email: email
     };
-    fetch('http://localhost:3000/api/v0/auth/login', {
+    fetch('http://localhost:3000/api/v0/auth/login' , {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(loginData)
     })
-        .then(response => response.json())
-        .then(loginData => {
-            console.log('Success:', loginData);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+    .then(response => response.json())
+    .then(signupData => {
+        console.log('Success:', signupData);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }

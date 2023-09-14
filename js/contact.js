@@ -8,7 +8,7 @@ function sendMessage () {
         name: name,
         email: email,
         text: message
-    }
+    };
     fetch('http://localhost:3000/api/v0/massages/' , {
         method: 'POST',
         headers: {
