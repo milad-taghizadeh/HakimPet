@@ -1,17 +1,17 @@
 document.getElementById('login-button').addEventListener('click', function () {
-  document.getElementById('form-title').textContent = 'ورود';
-  document.getElementById('login-form').classList.remove('hidden');
-  document.getElementById('signup-form').classList.add('hidden');
-  document.getElementById('login-button').classList.add('active');
-  document.getElementById('signup-button').classList.remove('active');
+    document.getElementById('form-title').textContent = 'ورود';
+    document.getElementById('login-form').classList.remove('hidden');
+    document.getElementById('signup-form').classList.add('hidden');
+    document.getElementById('login-button').classList.add('active');
+    document.getElementById('signup-button').classList.remove('active');
 });
 
 document.getElementById('signup-button').addEventListener('click', function () {
-  document.getElementById('form-title').textContent = 'ثبت نام';
-  document.getElementById('signup-form').classList.remove('hidden');
-  document.getElementById('login-form').classList.add('hidden');
-  document.getElementById('signup-button').classList.add('active');
-  document.getElementById('login-button').classList.remove('active');
+    document.getElementById('form-title').textContent = 'ثبت نام';
+    document.getElementById('signup-form').classList.remove('hidden');
+    document.getElementById('login-form').classList.add('hidden');
+    document.getElementById('signup-button').classList.add('active');
+    document.getElementById('login-button').classList.remove('active');
 });
 // Register
 document.getElementById('Register').addEventListener('click', signUp);
@@ -30,7 +30,7 @@ function signUp() {
         address: address,
         phoneNumber: phoneNumber
     };
-    fetch('http://localhost:3000/api/v0/auth/register' , {
+    fetch('http://localhost:3000/api/v0/auth/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -55,20 +55,23 @@ function logIn() {
         password: password,
         email: email
     };
-    fetch('http://localhost:3000/api/v0/auth/login' , {
+    fetch('http://localhost:3000/api/v0/auth/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(loginData)
     })
-    .then(response => response.json())
-    .then(loginData => {
-        console.log('Success:', loginData);
-        window.location.href = 'index.html';
-        alert('Login Successful');
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+        .then(response => response.json())
+        .then(loginData => {
+            console.log('Success:', loginData);
+            const userID = loginData._id;
+            localStorage.setItem('userID', userID);
+            console.log(userID)
+            window.location.href = 'index.html';
+            alert('Login Successful');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }

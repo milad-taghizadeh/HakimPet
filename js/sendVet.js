@@ -135,8 +135,10 @@ document.getElementById('SendVetSubmit').addEventListener('click', sendVetData);
 function sendVetData() {
   const date = document.getElementById('shamsi-date').value;
   console.log(document.getElementById('shamsi-date').value);
+  let userID = localStorage.getItem("userID");
   const sendVetDate = {
-    date: date
+    date: date,
+    userId: userID
   };
   fetch('http://localhost:3000/api/v0/SV/', {
     method: 'POST',
