@@ -10,7 +10,7 @@ const model = joi.object({
   }),
   pet: joi.string(),
   isAdmin: joi.boolean(),
-  phoneNumber: joi.string().pattern(new RegExp("^09[0|1|2|3][0-9]{8}$")),
+  phoneNumber: joi.string().pattern(new RegExp("^(\\+98|0)?9\\d{9}$")),
   address: joi.string(),
 });
 
