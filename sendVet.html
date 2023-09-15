@@ -34,23 +34,23 @@
 
     </header>
     <div class="formBox">
-        <form action="get-value">
+        <section>
             <label for="reqTime">زمان درخواست</label>
             <div class="date-input">
-                <input type="text" id="shamsi-date" placeholder="زمان درخواست خود را انتخاب کنید" readonly>
+                <input type="text" id="shamsi-date" placeholder="زمان درخواست خود را انتخاب کنید" >
                 <div class="datepicker">
                     <div class="calendar"></div>
                 </div>
-            </div>        
-                <input class="submitButton" type="submit" value="ثبت">
-        </form>
+            </div>
+            <input class="submitButton" id="SendVetSubmit" type="submit" value="ثبت">
+        </section>
     </div>
 
 
 
     <!-- Clinic js -->
     <script src="js/sendVet.js"></script>
-    <script src="js/time.js"></script>
+    <!-- <script src="js/time.js"></script> -->
 </body>
 
 </html>

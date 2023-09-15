@@ -30,7 +30,7 @@
   margin-bottom: 10px;
 }
 
-form {
+section {
   display: flex;
   flex-direction: column;
   gap: 10px;
