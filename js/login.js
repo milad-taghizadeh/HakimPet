@@ -62,16 +62,30 @@ function logIn() {
         },
         body: JSON.stringify(loginData)
     })
-        .then(response => response.json())
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            } else if (response.status === 401) {
+                throw new Error('Unauthorized'); // Throw an error for 401 response
+            } else {
+                throw new Error('Something went wrong');
+            }
+        })
         .then(loginData => {
             console.log('Success:', loginData);
+            localStorage.clear();
             const userID = loginData._id;
             localStorage.setItem('userID', userID);
-            console.log(userID)
+            console.log(userID);
             window.location.href = 'index.html';
             alert('Login Successful');
         })
         .catch(error => {
             console.error('Error:', error);
+            if (error.message === 'Unauthorized') {
+                alert('Login unsuccessful. Please check your credentials.');
+            } else {
+                alert('An error occurred. Please try again later.');
+            }
         });
 }
