@@ -52,56 +52,101 @@ fetch('http://localhost:3000/api/v0/massages/')
 fetch('http://localhost:3000/api/v0/SV/')
     .then(response => response.json())
     .then(svData => {
-        const id = svData[3].userId; // Get the ID from the first URL
-        console.log(id);
-
-        const userURL = `http://localhost:3000/api/v0/user/find/${id}`; // Append the ID to the second URL
-
-        return fetch(userURL);
-    })
-    .then(response => response.json())
-    .then(userData => {
-        console.log(userData);
-        let sendVetData = ``;
-        for (let i = Object.keys(userData).length - 1; i >= 0; i--) {
+        // Get the ID from the first URL
+        const promises = [];
+        for (let i = Object.keys(svData).length - 1; i >= 0; i--) {
             const key = i.toString();
-            sendVetData += `<div class="frame" id="frame">
+            const id = svData[key].userId;
+            const userURL = `http://localhost:3000/api/v0/user/find/${id}`;
+
+            // Fetch user data for each ID
+            const promise = fetch(userURL, { credentials: 'include' })
+                .then(response => response.json());
+            promises.push(promise);
+        }
+
+        // Wait for all promises to resolve
+        return Promise.all(promises)
+            .then(userDataArray => {
+                console.log(svData); // Access svData
+                console.log(userDataArray); // Access userDataArray
+
+                // Your logic here using svData and userDataArray
+                let sendVetData = ``;
+                for (let i = Object.keys(svData , userDataArray).length - 1; i >= 0; i--) {
+                    const key = i.toString();
+                    sendVetData += `<div class="frame" id="frame">
             <div class="name"><span>نام : </span></span>
-                <p id="Name">میلاد تقی زاده</p>
+            <p id="Name">${userDataArray[key].name}</p>
             </div>
             <div class="email"><span>آدرس ایمیل : </span></span>
-                <p id="Email">miladtaghizadeh@gmail.com</p>
+            <p id="Email">${userDataArray[key].email}</p>
             </div>
             <div class="address"><span>آدرس : </span></span>
-                <p id="Address">تهران شهرک غرب بلوار اندرزگو خیابان آزادی</p>
+            <p id="Address">${userDataArray[key].address}</p>
             </div>
             <div class="number"><span>شماره تلفن : </span></span>
-                <p id="Number">09391234567</p>
+            <p id="Number">${userDataArray[key].phoneNumber}</p>
             </div>
             <div class="pet"><span>حیوان : </span></span>
-                <p id="Pet">سگ</p>
+            <p id="Pet">${userDataArray[key].pet}</p>
             </div>
             <div class="sendVetDate"><span>تاریخ درخواستی : </span></span>
-                <p id="SendVetDate">${userData[key].date}</p>
+            <p id="SendVetDate">${svData[key].date}</p>
             </div>
-        </div>`;
-        }
-        document.getElementById('sendVetBox').innerHTML = sendVetData;
+            </div>`;
+                }
+                document.getElementById('sendVetBox').innerHTML = sendVetData;
+            });
     })
     .catch(error => {
         console.error(error);
     });
 
+    // fetch('http://localhost:3000/api/v0/SV/')
+    // .then(response => response.json())
+    // .then(svData => {
+    //     // Get the ID from the first URL
+    //     for (let i = Object.keys(svData).length - 1; i >= 0; i--) {
+    //         const key = i.toString();
+    //         const id = svData[key].userId;
+    //         const userURL = `http://localhost:3000/api/v0/user/find/${id}`;
+        
+    //     return fetch(userURL, { credentials: 'include' })
+    //         .then(response => response.json())
+    //         .then(userData => {
+    //             console.log(svData); // Access svData
+    //             console.log(userData); // Access userData
 
-
-// Promise.all([fetch('http://localhost:3000/api/v0/SV/'), fetch('http://localhost:3000/api/v0/user/')])
-// .then(responses => Promise.all(responses.map(response => response.json())))
-// .then(data => {
-//     const svData = data[0]; // Data from the first URL
-//     const userData = data[1]; // Data from the second URL
-
-
-// })
-// .catch(error => {
-//     console.error(error);
-// });
+    //             // Your logic here using svData and userData
+    //             let sendVetData = ``;
+    //             for (let i = Object.keys(svData).length - 1; i >= 0; i--) {
+    //                 const key = i.toString();
+    //                 sendVetData += `<div class="frame" id="frame">
+    //         <div class="name"><span>نام : </span></span>
+    //         <p id="Name">${userData.name}</p>
+    //         </div>
+    //         <div class="email"><span>آدرس ایمیل : </span></span>
+    //         <p id="Email">${userData.email}</p>
+    //         </div>
+    //         <div class="address"><span>آدرس : </span></span>
+    //         <p id="Address">${userData.address}</p>
+    //         </div>
+    //         <div class="number"><span>شماره تلفن : </span></span>
+    //         <p id="Number">${userData.phoneNumber}</p>
+    //         </div>
+    //         <div class="pet"><span>حیوان : </span></span>
+    //         <p id="Pet">${userData.pet}</p>
+    //         </div>
+    //         <div class="sendVetDate"><span>تاریخ درخواستی : </span></span>
+    //         <p id="SendVetDate">${svData[key].date}</p>
+    //         </div>
+    //       </div>`;
+    //             }
+    //             document.getElementById('sendVetBox').innerHTML = sendVetData;
+    //         });
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error(error);
+    // });
