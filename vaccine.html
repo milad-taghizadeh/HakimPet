@@ -11,59 +11,45 @@
 
 <body class="clinicBody">
 
-<!-- header -->
-<header>
-    <div class="logo">
-        <h1>HakimPet</h1>
+    <!-- header -->
+    <header>
+        <div class="logo">
+            <h1>HakimPet</h1>
+        </div>
+
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="sendVet.html">کلینیک آنلاین</a></li>
+                    <!-- <li><a href="counseling.html">مشاوره تلفنی</a></li> -->
+                    <li><a href="about.html">درباره ما</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="logIn">
+            <a href="login.html">ورود | ثبت نام</a>
+        </div>
+
+    </header>
+    <div class="formBox">
+        <section>
+            <label for="reqTime">درخواست واکسن</label>
+            <select id="VaccineType">
+                <option value="واکسن شماره یک">واکسن شماره یک</option>
+                <option value="واکسن شماره دو">واکسن شماره دو</option>
+              </select>
+            <div class="date-input">
+                <input type="text" id="shamsi-date" placeholder="زمان درخواست خود را انتخاب کنید">
+                <div class="datepicker">
+                    <div class="calendar"></div>
+                </div>
+            </div>
+            <input class="submitButton" id="VaccineSubmit" type="submit" value="ثبت">
+        </section>
     </div>
-
-    <div class="menu">
-        <nav>
-            <ul>
-                <li><a href="index.html">خانه</a></li>
-                <li><a href="sendVet.html">کلینیک آنلاین</a></li>
-                <!-- <li><a href="counseling.html">مشاوره تلفنی</a></li> -->
-                <li><a href="about.html">درباره ما</a></li>
-            </ul>
-        </nav>
-    </div>
-
-    <div class="logIn">
-        <a href="login.html">ورود | ثبت نام</a>
-    </div>
-
-</header>
-<div class="formBox">
-    <form action="get-value">
-<!--        <label for="fname">نام</label>-->
-<!--        <input type="text" id="fname" name="fname"><br><br>-->
-<!--        <label for="lname">نام خانوادگی</label>-->
-<!--        <input type="text" id="lname" name="name"><br><br>-->
-        <label for="" id="lastVaccine">تاریخ آخرین واکسن</label>
-        <input type="date" name="" id="">
-        <input type="submit" value="درخواست">
-<!--        <label for="animal">انتخاب حیوان</label>-->
-<!--        <select name="animal" id="pet">-->
-<!--            <option value="dog">سگ</option>-->
-<!--            <option value="cat">گربه</option>-->
-<!--        </select>-->
-<!--        <label for="">انتخاب سایز پت</label>-->
-<!--        <select name="size" id="petSize">-->
-<!--            <option value="small">کوچک</option>-->
-<!--            <option value="normal">متوسط</option>-->
-<!--            <option value="large">بزرگ</option>-->
-<!--        </select>-->
-<!--        <label for="" id="vaccineType">نوع واکسن</label>-->
-<!--        <select name="vaccine" id="vaccine">-->
-<!--            <option value="واکسن شماره ۱"></option>-->
-<!--            <option value="واکسن شماره ۲"></option>-->
-<!--        </select>-->
-<!--        <label for="address" id="address">آدرس کامل</label>-->
-<!--        <input type="text">-->
-    </form>
-</div>
-
-<script src="js/clinic.js"></script>
+    <script src="./js/clinic.js"></script>
 </body>
 
 </html>

@@ -79,7 +79,7 @@ function logIn() {
             const userID = loginData._id;
             localStorage.setItem('userID', userID);
             console.log(userID);
-            window.location.href = 'admin.html';
+            window.location.href = 'index.html';
             alert('Login Successful');
         })
         .catch(error => {
