@@ -47,21 +47,6 @@ function signUp() {
         });
 }
 // Login
-function getCookie(name) {
-    const cookieString = document.cookie;
-    const cookies = cookieString.split(';');
-
-    for (let i = 0; i < cookies.length; i++) {
-        const cookie = cookies[i].trim();
-        const [cookieName, cookieValue] = cookie.split('=');
-
-        if (cookieName === name) {
-            return decodeURIComponent(cookieValue);
-        }
-    }
-
-    return null; // Cookie not found
-}
 document.getElementById('Login').addEventListener('click', logIn);
 function logIn() {
     const email = document.getElementById('LoginEmail').value;
@@ -75,11 +60,11 @@ function logIn() {
         headers: {
             'Content-Type': 'application/json',
         },
+        credentials: 'include', // Add this line
         body: JSON.stringify(loginData)
     })
         .then(response => {
             if (response.ok) {
-
                 return response.json();
             } else if (response.status === 401) {
                 throw new Error('Unauthorized'); // Throw an error for 401 response

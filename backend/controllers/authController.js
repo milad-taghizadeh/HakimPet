@@ -82,7 +82,7 @@ const logInController = async (req, res) => {
         // if it matches we return the object without thw PASSWORD and the access token
         res
           .status(200)
-          .cookie("accessToken", accessToken, { httpOnly: true })
+          .cookie("accessToken", accessToken, { httpOnly: true , sameSite: 'None', secure: true })
           .json({ ...others });
       }
     }

@@ -13,7 +13,8 @@ const massageRouter = require("../routers/massage");
 //use the routers and middleware , Export the function
 module.exports = function (app) {
   // CORS for browsers
-  app.use(cors());
+  app.use(cors({ credentials: true, origin: 'http://127.0.0.1:5500' }));
+
 
   // JSON converter
   app.use(express.json());
