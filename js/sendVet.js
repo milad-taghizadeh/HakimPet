@@ -1,3 +1,5 @@
+document.getElementById("shamsi-date").readOnly = true;
+
 // Function to convert Gregorian date to Shamsi date
 function convertToShamsiDate(date) {
   const shamsiDate = new Intl.DateTimeFormat("fa-IR").format(date);
