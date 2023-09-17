@@ -47,6 +47,21 @@ function signUp() {
         });
 }
 // Login
+function getCookie(name) {
+    const cookieString = document.cookie;
+    const cookies = cookieString.split(';');
+
+    for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        const [cookieName, cookieValue] = cookie.split('=');
+
+        if (cookieName === name) {
+            return decodeURIComponent(cookieValue);
+        }
+    }
+
+    return null; // Cookie not found
+}
 document.getElementById('Login').addEventListener('click', logIn);
 function logIn() {
     const email = document.getElementById('LoginEmail').value;
@@ -58,12 +73,13 @@ function logIn() {
     fetch('http://localhost:3000/api/v0/auth/login', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(loginData)
     })
         .then(response => {
             if (response.ok) {
+
                 return response.json();
             } else if (response.status === 401) {
                 throw new Error('Unauthorized'); // Throw an error for 401 response
@@ -72,12 +88,13 @@ function logIn() {
             }
         })
         .then(loginData => {
+
             console.log('Success:', loginData);
             localStorage.clear();
             const userID = loginData._id;
             localStorage.setItem('userID', userID);
             console.log(userID);
-            window.location.href = 'index.html';
+            window.location.href = 'admin.html';
             alert('Login Successful');
         })
         .catch(error => {

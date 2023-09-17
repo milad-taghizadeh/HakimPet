@@ -51,9 +51,19 @@ fetch('http://localhost:3000/api/v0/massages/')
 // SendVetBox
 fetch('http://localhost:3000/api/v0/SV/')
     .then(response => response.json())
-    .then(data => {
+    .then(svData => {
+        const id = svData[3].userId; // Get the ID from the first URL
+        console.log(id);
+
+        const userURL = `http://localhost:3000/api/v0/user/find/${id}`; // Append the ID to the second URL
+
+        return fetch(userURL);
+    })
+    .then(response => response.json())
+    .then(userData => {
+        console.log(userData);
         let sendVetData = ``;
-        for (let i = Object.keys(data).length - 1; i >= 0; i--) {
+        for (let i = Object.keys(userData).length - 1; i >= 0; i--) {
             const key = i.toString();
             sendVetData += `<div class="frame" id="frame">
             <div class="name"><span>نام : </span></span>
@@ -72,7 +82,7 @@ fetch('http://localhost:3000/api/v0/SV/')
                 <p id="Pet">سگ</p>
             </div>
             <div class="sendVetDate"><span>تاریخ درخواستی : </span></span>
-                <p id="SendVetDate">${data[key].date}</p>
+                <p id="SendVetDate">${userData[key].date}</p>
             </div>
         </div>`;
         }
@@ -81,3 +91,17 @@ fetch('http://localhost:3000/api/v0/SV/')
     .catch(error => {
         console.error(error);
     });
+
+
+
+// Promise.all([fetch('http://localhost:3000/api/v0/SV/'), fetch('http://localhost:3000/api/v0/user/')])
+// .then(responses => Promise.all(responses.map(response => response.json())))
+// .then(data => {
+//     const svData = data[0]; // Data from the first URL
+//     const userData = data[1]; // Data from the second URL
+
+
+// })
+// .catch(error => {
+//     console.error(error);
+// });
