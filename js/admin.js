@@ -49,12 +49,6 @@ fetch('http://localhost:3000/api/v0/massages/')
     });
 
 // SendVetBox
-
-
-
-
-
-
 fetch('http://localhost:3000/api/v0/SV/')
     .then(response => response.json())
     .then(svData => {
@@ -115,9 +109,9 @@ fetch('http://localhost:3000/api/v0/vaccination/')
     .then(vaccineData => {
         // Get the ID from the first URL
         const promises = [];
-        for (let i = Object.keys(vaccineData).length - 1; i >= 0; i--) {
-            const key = i.toString();
-            const id = vaccineData[key].userId;
+        for (let j = 0; j < Object.keys(vaccineData).length; j++) {
+            const key2 = j.toString();
+            const id = vaccineData[key2].userId;
             const userURL = `http://localhost:3000/api/v0/user/find/${id}`;
 
             // Fetch user data for each ID
@@ -134,7 +128,7 @@ fetch('http://localhost:3000/api/v0/vaccination/')
 
                 // Your logic here using svData and userDataArray
                 let vcData = ``;
-                for (let i = Object.keys(vaccineData, userDataArray).length - 1; i >= 0; i--) {
+                for (let i = Object.keys(userDataArray).length - 1; i >= 0; i--) {
                     const key = i.toString();
                     vcData += `<div class="frame">
                     <div class="name"><span>نام : </span></span>
