@@ -5,8 +5,8 @@ const ObjectId = mongoose.Schema.ObjectId;
 // create the mongoose schema
 const vetSchema = mongoose.Schema(
   {
-    userId: { type: ObjectId },
-    date: { type: Date },
+    userId: { type: ObjectId, required: true },
+    date: { type: String, required: true },
   },
   { timestamps: true }
 );
