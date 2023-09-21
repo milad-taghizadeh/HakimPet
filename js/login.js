@@ -1,3 +1,31 @@
+// alertBox 
+function showAlert(color, content) {
+    var alertBox = document.getElementById("alertBox");
+    var progressBar = document.getElementById("progressBar");
+    var alertContent = document.getElementById("alertContent");
+
+    alertBox.style.display = "block";
+    alertContent.innerHTML = content;
+    alertBox.classList.remove("green", "red");
+    alertBox.classList.add(color);
+
+    var width = 0;
+    var interval = setInterval(frame, 50);
+
+    function frame() {
+        if (width >= 100) {
+            clearInterval(interval);
+            alertBox.style.display = "none";
+            progressBar.style.width = 0;
+        } else {
+            width++;
+            progressBar.style.width = width + "%";
+        }
+    }
+}
+
+
+// login form
 document.getElementById('login-button').addEventListener('click', function () {
     document.getElementById('form-title').textContent = 'ورود';
     document.getElementById('login-form').classList.remove('hidden');
@@ -79,13 +107,13 @@ function logIn() {
             const userID = loginData._id;
             localStorage.setItem('userID', userID);
             console.log(userID);
+            showAlert("green", "Welcome back!");
             window.location.href = 'index.html';
-            alert('Login Successful');
         })
         .catch(error => {
             console.error('Error:', error);
             if (error.message === 'Unauthorized') {
-                alert('Login unsuccessful. Please check your credentials.');
+                alert('نام کاربری یا رمز عبور اشتباه می باشد');
             } else {
                 alert('An error occurred. Please try again later.');
             }
